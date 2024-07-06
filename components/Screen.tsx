@@ -3,5 +3,18 @@ type ScreenProps = {
 }
 
 export const Screen = ({ children }: ScreenProps) => {
-  return <div className='px-4'>{children}</div>
+  return (
+    <div className='px-4'>
+      {children}
+      <style global jsx>{`
+        html,
+        body,
+        body > div:first-child,
+        div#__next,
+        div#__next > div {
+          height: 100%;
+        }
+      `}</style>
+    </div>
+  )
 }

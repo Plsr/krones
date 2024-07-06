@@ -1,4 +1,3 @@
-import { BottomNav } from '@/components/BottomNav'
 import { ConversionRate } from '@/components/ConversionRate'
 import { CurrencyConverter } from '@/components/CurrencyConverter'
 import { Screen } from '@/components/Screen'
@@ -92,7 +91,6 @@ const Index = () => {
       <div className='flex flex-col gap-6'>
         <CurrencyConverter />
         <ConversionRate />
-        <BottomNav />
       </div>
     </Screen>
   )
