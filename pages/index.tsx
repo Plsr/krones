@@ -1,6 +1,7 @@
+import { BottomNav } from '@/components/BottomNav'
 import { ConversionRate } from '@/components/ConversionRate'
 import { CurrencyConverter } from '@/components/CurrencyConverter'
-import { Page } from '@/components/Page'
+import { Screen } from '@/components/Screen'
 import { useEffect } from 'react'
 
 const Index = () => {
@@ -87,12 +88,13 @@ const Index = () => {
   }, [])
 
   return (
-    <Page>
+    <Screen>
       <div className='flex flex-col gap-6'>
         <CurrencyConverter />
         <ConversionRate />
+        <BottomNav />
       </div>
-    </Page>
+    </Screen>
   )
 }
 
