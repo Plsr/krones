@@ -7,7 +7,6 @@ export const Screen = ({ children }: ScreenProps) => {
     <div className='px-4 h-full'>
       {children}
       <style global jsx>{`
-        html,
         body,
         body > div:first-child,
         div#__next,

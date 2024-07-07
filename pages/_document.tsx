@@ -26,7 +26,7 @@ export default function Document() {
       <style>
         {`
           html {
-            min-height: calc(100% - env(safe-area-inset-top));
+            height: calc(100% + env(safe-area-inset-top));
           }
         `}
       </style>
