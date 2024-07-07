@@ -10,7 +10,7 @@ export const BottomNav = () => {
   return (
     <div className='mt-auto'>
       <Separator />
-      <div className='flex justify-around pt-4 pb-safe-offset-4'>
+      <div className='flex justify-around py-4'>
         <MenuItem
           href='/'
           title='Convert'
