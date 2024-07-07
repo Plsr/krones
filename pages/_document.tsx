@@ -16,6 +16,10 @@ export default function Document() {
           media='(prefers-color-scheme: dark)'
         />
         <meta name='theme-color' content='#f4f4f5' />
+        <meta
+          name='apple-mobile-web-app-status-bar-style'
+          content='black-translucent'
+        ></meta>
         <link rel='apple-touch-icon' href='/images/icon-maskable-512.png' />
         <link rel='manifest' href='/manifest.json' />
       </Head>
