@@ -4,7 +4,7 @@ type ScreenProps = {
 
 export const Screen = ({ children }: ScreenProps) => {
   return (
-    <div className='px-4'>
+    <div className='px-4 h-full'>
       {children}
       <style global jsx>{`
         html,
