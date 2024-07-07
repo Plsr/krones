@@ -30,7 +30,7 @@ export default function Document() {
           }
         `}
       </style>
-      <body className='p-safe'>
+      <body className='pb-safe'>
         <Main />
         <NextScript />
       </body>
