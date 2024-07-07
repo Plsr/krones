@@ -1,14 +1,14 @@
-'use client'
-
-import { ChangeEvent, ChangeEventHandler, useRef, useState } from 'react'
+import { ChangeEvent, useContext, useRef, useState } from 'react'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
+import { ExchangeRateContext } from '@/providers/ExchangeRateProvider'
 
 export const CurrencyConverter = () => {
   const [result, setResult] = useState<undefined | string>(undefined)
   const dkkInputRef = useRef<HTMLInputElement | null>(null)
-  const eurInputRef = useRef<HTMLInputElement | null>(null)
+
+  const { rate } = useContext(ExchangeRateContext)
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(event.target.value)
@@ -16,8 +16,6 @@ export const CurrencyConverter = () => {
     if (!value) {
       return
     }
-
-    const rate = 0.13
 
     setResult((value * rate).toFixed(2))
   }

@@ -5,6 +5,8 @@ import { Header } from '@/components/header'
 import { Separator } from '@/components/ui/separator'
 import { BottomNav } from '@/components/BottomNav'
 import { useEffect } from 'react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ExchangeRateProvider } from '@/providers/ExchangeRateProvider'
 
 export default function App({ Component, pageProps }: AppProps) {
   // This hook only run once in browser after the component is rendered for the first time.
@@ -89,19 +91,25 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [])
 
+  const queryClient = new QueryClient()
+
   return (
-    <ThemeProvider
-      attribute='class'
-      defaultTheme='system'
-      disableTransitionOnChange
-    >
-      <div className='flex flex-col'>
-        <Header />
-        <Separator />
-        <div className='h-4' />
-        <Component {...pageProps} />
-        <BottomNav />
-      </div>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider
+        attribute='class'
+        defaultTheme='system'
+        disableTransitionOnChange
+      >
+        <ExchangeRateProvider>
+          <div className='flex flex-col'>
+            <Header />
+            <Separator />
+            <div className='h-4' />
+            <Component {...pageProps} />
+            <BottomNav />
+          </div>
+        </ExchangeRateProvider>
+      </ThemeProvider>
+    </QueryClientProvider>
   )
 }
