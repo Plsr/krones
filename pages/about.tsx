@@ -3,8 +3,7 @@ import { Screen } from '@/components/Screen'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Separator } from '@/components/ui/separator'
-import { Github, TentTree, Twitter } from 'lucide-react'
+import { Twitter } from 'lucide-react'
 
 const About = () => {
   return (
@@ -12,12 +11,12 @@ const About = () => {
       <div className='h-full flex flex-col'>
         <h1 className='text-lg font-bold mb-4'>About</h1>
         <p className='leading-7 mb-4'>
-          Kroner ("crowns" in Danish) is a small currency calculation app. I
-          converts Danish Crowns (DKK) to Euro (EUR).
+          Kroner (&quot;crowns&quot; in Danish) is a small currency calculation
+          app. I converts Danish Crowns (DKK) to Euro (EUR).
         </p>
         <p className='leading-7 mb-4'>
-          I built is as a learning project to learn more about PWAs. Since I'll
-          soon be moving to Denmark, this felt like a good candidate.
+          I built is as a learning project to learn more about PWAs. Since
+          I&apso;ll soon be moving to Denmark, this felt like a good candidate.
         </p>
         <p className='leading-7 mb-4'>
           It is 100% inspired by{' '}
