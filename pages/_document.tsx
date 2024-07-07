@@ -26,11 +26,11 @@ export default function Document() {
       <style>
         {`
           html {
-            min-height: clac(100% - env(safe-area-inset-top));
+            min-height: calc(100% - env(safe-area-inset-top));
           }
         `}
       </style>
-      <body className='pb-safe'>
+      <body className='p-safe'>
         <Main />
         <NextScript />
       </body>
