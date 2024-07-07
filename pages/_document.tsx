@@ -23,6 +23,13 @@ export default function Document() {
         <link rel='apple-touch-icon' href='/images/icon-maskable-512.png' />
         <link rel='manifest' href='/manifest.json' />
       </Head>
+      <style>
+        {`
+          html {
+            min-height: clac(100% - env(safe-area-inset-top));
+          }
+        `}
+      </style>
       <body className='p-safe'>
         <Main />
         <NextScript />
