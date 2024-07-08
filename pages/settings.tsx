@@ -7,7 +7,7 @@ import { MoonIcon, SunIcon, Twitter } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
 export default function Settings() {
-  const { theme, setTheme } = useTheme()
+  const { theme: resolvedTheme, setTheme } = useTheme()
   return (
     <Screen>
       <div className='h-full flex flex-col'>
@@ -15,14 +15,14 @@ export default function Settings() {
         <h2 className='font-bold mb-2'>Theme</h2>
         <div className='grid grid-cols-2 gap-4 mb-12'>
           <Button
-            variant={theme === 'light' ? 'default' : 'outline'}
+            variant={resolvedTheme === 'light' ? 'default' : 'outline'}
             onClick={() => setTheme('light')}
           >
             <SunIcon className='h-[1.2rem] w-[1.2rem] mr-2' />
             Light
           </Button>
           <Button
-            variant={theme === 'dark' ? 'default' : 'outline'}
+            variant={resolvedTheme === 'dark' ? 'default' : 'outline'}
             onClick={() => setTheme('dark')}
           >
             <MoonIcon className='h-[1.2rem] w-[1.2rem] mr-2' />
