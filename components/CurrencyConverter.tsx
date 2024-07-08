@@ -1,6 +1,4 @@
 import { ChangeEvent, useContext, useRef, useState } from 'react'
-import { Input } from './ui/input'
-import { Button } from './ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { ExchangeRateContext } from '@/providers/ExchangeRateProvider'
 import { CurrencyInput } from './CurrencyInput'
