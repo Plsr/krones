@@ -106,7 +106,6 @@ export default function App({ Component, pageProps }: AppProps) {
             <Separator />
             <div className='h-4' />
             <Component {...pageProps} />
-            <BottomNav />
           </div>
         </ExchangeRateProvider>
       </ThemeProvider>

@@ -3,23 +3,36 @@ import { Screen } from '@/components/Screen'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Twitter } from 'lucide-react'
+import { MoonIcon, SunIcon, Twitter } from 'lucide-react'
+import { useTheme } from 'next-themes'
 
-const About = () => {
+export default function Settings() {
+  const { theme, setTheme } = useTheme()
   return (
     <Screen>
       <div className='h-full flex flex-col'>
+        <h1 className='text-lg font-bold mb-4'>Settings</h1>
+        <h2 className='font-bold mb-2'>Theme</h2>
+        <div className='grid grid-cols-2 gap-4 mb-12'>
+          <Button
+            variant={theme === 'light' ? 'default' : 'outline'}
+            onClick={() => setTheme('light')}
+          >
+            <SunIcon className='h-[1.2rem] w-[1.2rem] mr-2' />
+            Light
+          </Button>
+          <Button
+            variant={theme === 'dark' ? 'default' : 'outline'}
+            onClick={() => setTheme('dark')}
+          >
+            <MoonIcon className='h-[1.2rem] w-[1.2rem] mr-2' />
+            Dark
+          </Button>
+        </div>
+
         <h1 className='text-lg font-bold mb-4'>About</h1>
         <p className='leading-7 mb-4'>
-          Kroner (&quot;crowns&quot; in Danish) is a small currency calculation
-          app. I converts Danish Crowns (DKK) to Euro (EUR).
-        </p>
-        <p className='leading-7 mb-4'>
-          I built is as a learning project to learn more about PWAs. Since
-          I&apso;ll soon be moving to Denmark, this felt like a good candidate.
-        </p>
-        <p className='leading-7 mb-4'>
-          It is 100% inspired by{' '}
+          A learning project 100% inspired by{' '}
           <a
             className='underline text-blue-500'
             href='https://www.producthunt.com/products/yenny'
@@ -28,13 +41,13 @@ const About = () => {
           </a>
           .
         </p>
-        <div className='grid grid-cols-2 my-6 gap-4'>
+        <div className='grid grid-cols-2 mb-6 gap-4'>
           <FeatureRequestButton />
           <Button asChild variant='secondary'>
             <a href='https://kroner.features.vote/board'>Roadmap</a>
           </Button>
         </div>
-        <div className='mt-auto pb-8'>
+        <div className='pb-8'>
           <Card className='pt-6'>
             <CardContent className='flex items-center justify-between'>
               <div className='flex gap-4 items-center'>
@@ -70,5 +83,3 @@ const SocialButton = ({ link, renderIcon }: SocialButtonProps) => {
     </Button>
   )
 }
-
-export default About
