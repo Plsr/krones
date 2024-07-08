@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Separator } from './ui/separator'
-import { PiggyBank, RefreshCw, Signature } from 'lucide-react'
+import { RefreshCw, Signature } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 
@@ -16,12 +16,6 @@ export const BottomNav = () => {
           title='Convert'
           active={pathname === '/'}
           renderIcon={() => <RefreshCw className='h-4 w-4' />}
-        />
-        <MenuItem
-          href='/prices'
-          title='Prices'
-          active={pathname === '/prices'}
-          renderIcon={() => <PiggyBank className='h-4 w-4' />}
         />
         <MenuItem
           href='/about'

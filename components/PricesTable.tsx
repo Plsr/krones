@@ -1,4 +1,3 @@
-import { Screen } from '@/components/Screen'
 import {
   Table,
   TableBody,
@@ -7,6 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
 const rate = 0.13
 
@@ -19,24 +19,29 @@ const data = [
   { name: 'Oat Milk', price: 22 },
 ]
 
-const Prices = () => {
+export const PricingTable = () => {
   return (
-    <Screen>
-      <Table>
-        <TableHeader>
-          <TableRow className='border-b border-b-neutral-200 dark:border-b-neutral-700'>
-            <TableHead>Item</TableHead>
-            <TableHead>DKK</TableHead>
-            <TableHead>EUR</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {data.map((item) => (
-            <TableItem key={item.name} name={item.name} price={item.price} />
-          ))}
-        </TableBody>
-      </Table>
-    </Screen>
+    <Card>
+      <CardHeader>
+        <CardTitle>Prices of common Items</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Table>
+          <TableHeader>
+            <TableRow className='border-b border-b-neutral-200 dark:border-b-neutral-700'>
+              <TableHead>Item</TableHead>
+              <TableHead>DKK</TableHead>
+              <TableHead>EUR</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {data.map((item) => (
+              <TableItem key={item.name} name={item.name} price={item.price} />
+            ))}
+          </TableBody>
+        </Table>
+      </CardContent>
+    </Card>
   )
 }
 
@@ -56,5 +61,3 @@ const TableItem = ({ name, price }: TableItemProps) => {
     </TableRow>
   )
 }
-
-export default Prices
