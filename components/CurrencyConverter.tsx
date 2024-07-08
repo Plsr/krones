@@ -3,6 +3,7 @@ import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { ExchangeRateContext } from '@/providers/ExchangeRateProvider'
+import { CurrencyInput } from './CurrencyInput'
 
 export const CurrencyConverter = () => {
   const [result, setResult] = useState<undefined | string>(undefined)
@@ -28,16 +29,15 @@ export const CurrencyConverter = () => {
         </CardHeader>
         <CardContent>
           <div className='grid grid-cols-2 gap-4'>
-            <Input
+            <CurrencyInput
               type='number'
               inputMode='numeric'
               placeholder='DKK'
               ref={dkkInputRef}
+              currency='kr.'
               onChange={handleInputChange}
             />
-            <Button variant='secondary' disabled>
-              {result} €
-            </Button>
+            <CurrencyInput disabled value={result} currency='€' />
           </div>
         </CardContent>
       </Card>

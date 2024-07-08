@@ -1,5 +1,6 @@
 import { ConversionRate } from '@/components/ConversionRate'
 import { CurrencyConverter } from '@/components/CurrencyConverter'
+import { CurrencyInput } from '@/components/CurrencyInput'
 import { Screen } from '@/components/Screen'
 
 const Index = () => {
