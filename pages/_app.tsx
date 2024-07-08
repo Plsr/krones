@@ -3,7 +3,6 @@ import { ThemeProvider } from 'next-themes'
 import '@/styles/globals.css'
 import { Header } from '@/components/header'
 import { Separator } from '@/components/ui/separator'
-import { BottomNav } from '@/components/BottomNav'
 import { useEffect } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ExchangeRateProvider } from '@/providers/ExchangeRateProvider'
@@ -106,7 +105,6 @@ export default function App({ Component, pageProps }: AppProps) {
             <Separator />
             <div className='h-4' />
             <Component {...pageProps} />
-            <BottomNav />
           </div>
         </ExchangeRateProvider>
       </ThemeProvider>
