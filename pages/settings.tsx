@@ -7,7 +7,8 @@ import { MoonIcon, SunIcon, Twitter } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
 export default function Settings() {
-  const { theme: resolvedTheme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
+  console.log(resolvedTheme)
   return (
     <Screen>
       <div className='h-full flex flex-col'>
