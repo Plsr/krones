@@ -9,7 +9,7 @@ export const CurrencyInput = React.forwardRef<
 >(({ currency, ...inputProps }, ref) => {
   return (
     <div className='relative'>
-      <Input {...inputProps} ref={ref} className='pr-9' />
+      <Input {...inputProps} autoFocus ref={ref} className='pr-9' />
       <div className='opacity-60 absolute right-3 top-[6px]'>{currency}</div>
     </div>
   )
