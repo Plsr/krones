@@ -30,9 +30,11 @@ export default function Document() {
           }
         `}
       </style>
-      <body className='p-safe'>
-        <Main />
-        <NextScript />
+      <body className='p-safe dark:bg-neutral-950'>
+        <div className=' md:max-w-screen-lg mx-auto'>
+          <Main />
+          <NextScript />
+        </div>
       </body>
     </Html>
   )
