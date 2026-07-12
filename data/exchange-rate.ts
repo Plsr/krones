@@ -42,7 +42,7 @@ type ExchangeRate = {
 }
 
 export const getExchangeRate = async () => {
-  const res = await fetch('https://api.frankfurter.app/latest?from=DKK')
+  const res = await fetch('https://api.frankfurter.dev/v1/latest?base=DKK')
 
   if (res.status !== 200) {
     throw new Error('Whoops')
