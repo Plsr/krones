@@ -7,17 +7,9 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
+import everydayPrices from '@/data/everyday-prices.json'
 
-const rate = 0.13
-
-const data = [
-  { name: 'Gasoline (1 Ltr.)', price: 15.79 },
-  { name: 'Cappucino', price: 45 },
-  { name: 'Whopper', price: 70 },
-  { name: 'Big Mac', price: 49 },
-  { name: 'Milk', price: 14 },
-  { name: 'Oat Milk', price: 22 },
-]
+const { rate, items: data } = everydayPrices
 
 export const PricingTable = () => {
   return (

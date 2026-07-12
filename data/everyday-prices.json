@@ -1,0 +1,11 @@
+{
+  "rate": 0.13,
+  "items": [
+    { "name": "Gasoline (1 Ltr.)", "price": 15.79 },
+    { "name": "Cappucino", "price": 45 },
+    { "name": "Whopper", "price": 70 },
+    { "name": "Big Mac", "price": 49 },
+    { "name": "Milk", "price": 14 },
+    { "name": "Oat Milk", "price": 22 }
+  ]
+}
